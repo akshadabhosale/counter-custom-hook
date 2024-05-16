@@ -1,13 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import useCounter from './hooks/UseCounter';
+
+
 
 export default function App() {
-    const [count,setCount]=useState(0);
-
-    const handleIncrement=()=>{
-        setCount((count)=>{
-            return count+1;
-        })
-    }
+    const {count,handleIncrement}=useCounter();
+   
 
   return (
     <div>
